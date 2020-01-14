@@ -11,9 +11,10 @@ WeightedGraph::WeightedGraph(const char* fileName)
 	importFile.open(fileName, ios::in);
 
 	string from, to; size_t len;
+	cout << "Data importing from file named: " << fileName << endl;
 	while (importFile >> from >> to >> len)
 	{
-		cout << "Succesful:: " << from << ": " << to << ": " << len << endl;
+		cout << "Import Succesful:: " << from << ": " << to << ": " << len << endl;
 		AddNode(from, to, len);
 	}
 }
@@ -54,6 +55,7 @@ WeightedGraph::~WeightedGraph()
 
 bool WeightedGraph::GenerateLenList(string nodeName)
 {
+	cout << "List preparing for: " << nodeName << endl;
 	// give max value to graph (except target)
 	for (auto &&i : graphMap)
 		if (i->name.compare(nodeName) == 0)
@@ -95,6 +97,7 @@ void WeightedGraph::RefreshMap()
 
 void WeightedGraph::PrintLenList()
 {
+	cout << "List printing" << endl;
 	for (auto &&i : graphMap)
 	{
 		cout << i->name <<  ": " << i->len << endl;

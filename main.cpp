@@ -8,7 +8,7 @@ int main()
 {
 	WeightedGraph* wg = new WeightedGraph("a.txt");
 
-	wg->GenerateLenList("C");
+	wg->GenerateLenList("A");
 
 	wg->PrintLenList();
 
