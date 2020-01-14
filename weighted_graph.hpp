@@ -48,6 +48,7 @@ private:
 public:
 	bool GenerateLenList(string nodeName);
 	void PrintLenList();
+	void ClearGraph();
 };
 
 #endif

@@ -12,5 +12,7 @@ int main()
 
 	wg->PrintLenList();
 
+	wg->ClearGraph();
+
 	string a; cin >> a;
 }

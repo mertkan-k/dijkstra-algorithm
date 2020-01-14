@@ -104,3 +104,16 @@ void WeightedGraph::PrintLenList()
 	}
 	
 }
+
+void WeightedGraph::ClearGraph()
+{
+	cout << "Graph cleaning" << endl;
+	for (auto &&i : graphMap)
+	{
+		for (auto &&j : i->edges)
+		{
+			free(j);
+		}
+		free(i);
+	}
+}
