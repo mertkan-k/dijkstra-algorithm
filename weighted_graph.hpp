@@ -14,21 +14,9 @@ typedef struct sNode
 	size_t len;
 	bool is_okey;
 
-	sNode(string _name, vector<struct sEdge*> _edges):
-	name(_name),
-	edges(_edges),
-	len(UINT32_MAX),
-	is_okey(false)
-	{}
 	sNode(string _name):
 	name(_name),
 	len(UINT32_MAX),
-	is_okey(false)
-	{}
-	sNode(string _name, vector<struct sEdge*> _edges, size_t _len):
-	name(_name),
-	edges(_edges),
-	len(_len),
 	is_okey(false)
 	{}
 } tNode;
