@@ -51,6 +51,7 @@ void WeightedGraph::AddNode(string from, string to, size_t len)
 
 WeightedGraph::~WeightedGraph()
 {
+	ClearGraph();
 }
 
 bool WeightedGraph::GenerateLenList(string nodeName)

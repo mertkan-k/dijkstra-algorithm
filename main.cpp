@@ -8,11 +8,11 @@ int main()
 {
 	WeightedGraph* wg = new WeightedGraph("a.txt");
 
-	wg->GenerateLenList("A");
+	wg->GenerateLenList("s");
 
 	wg->PrintLenList();
 
-	wg->ClearGraph();
+	delete wg;
 
 	string a; cin >> a;
 }
